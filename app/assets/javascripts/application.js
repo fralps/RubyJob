@@ -10,6 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+// ---------- TEMPLATE'S JS --------------
+//= require jquery/jquery.min
+//= require jquery/jquery-migrate.min
+//= require bootstrap/js/bootstrap.bundle.min
+//= require easing/easing.min
+//= require superfish/hoverIntent
+//= require superfish/superfish.min
+//= require wow/wow.min
+//= require venobox/venobox.min
+//= require owlcarousel/owl.carousel.min
+//= require contactform/contactform
+//= require js/main
+
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
