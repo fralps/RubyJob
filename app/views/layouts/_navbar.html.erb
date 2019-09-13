@@ -2,18 +2,25 @@
   <div class="container">
 
     <div id="logo" class="pull-left">
-      
-       <h1><a href="#main"><span>RUBY</span> J<span><i class="fas fa-gem fa-sm"></i></span>B</a></h1>
-      <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
+      <h1 class="text-light"><span>RUBY</span> J<span><i class="fas fa-gem fa-sm"></i></span>B</h1>
     </div>
 
-  <nav id="nav-menu-container">
+   <nav id="nav-menu-container">
     <ul class="nav-menu">
-        <li class="menu-active"><a href="#intro">Accueil</a></li>
-        <li><a href="#about">Le concept</a></li>
-        <li><a href="#">Offres</a></li>
-        <li class="buy-tickets"><a href="#">Connexion / Inscription</a></li>
+      <li class="menu-active"><a href="#intro">Accueil</a></li>
+      <li><a href="#about">Le concept</a></li>
+      <li><a href="#offers">Avantages recruteurs</a></li>
+      <li><a href="#">Offres d'emploi</a></li>
+
+      <!-- Connexion -->
+      <% if user_signed_in? %>
+      <%= link_to 'Éditer mon profil', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+      <a><%= link_to "Connexion", new_user_session_path, :class => ''  %> |
+      <%= link_to "Inscription", new_user_registration_path, :class => 'offers'  %></a>
+      <% end %>
     </ul>
-    </nav><!-- #nav-menu-container -->
+  </nav><!-- #nav-menu-container -->
 </div>
 </header><!-- #header -->
