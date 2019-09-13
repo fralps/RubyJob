@@ -8,6 +8,12 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- Box Icon -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.3/css/boxicons.min.css' rel='stylesheet'>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -19,5 +25,9 @@
     <!-- Navbar partial -->
     <%= render 'layouts/navbar' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
+
+    <!-- Box Icon JS -->
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 </body>
 </html>
