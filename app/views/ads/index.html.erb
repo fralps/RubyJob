@@ -1,0 +1,26 @@
+<section id="index" class="section-with-bg fadeInUp">
+
+	<div class="container">
+		<div class="section-header">
+			<h2>Nos offres</h2>
+			<p>Trouvez votre bonheur</p>
+		</div>
+		
+		<div class="row">
+			<% @ads.each do |a| %>
+			<div class="col-lg-4 col-md-6">
+				<div class="ad rounded">
+					<div class="ad-img">
+						<img src="#" alt="image" class="img-fluid">
+					</div>
+					<h3><%= a.title %></h3>
+					<div>
+						<p><%= a.location %></p>
+					</div>
+					<p><%= a.user.company %></p>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</section>
