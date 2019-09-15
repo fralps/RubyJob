@@ -189,6 +189,30 @@ h6 {
   max-height: 40px;
 }
 
+.sign-btn {
+  font-size: 5px;
+  border-radius: 50px;
+  padding: 2px;
+  transition: all 0.2s;
+  background-color: #f82249;
+  border: 0;
+  color: #fff;
+}
+
+.sign-btn:hover {
+  background-color: #e0072f;
+}
+
+.dropdown-menu .list {
+  transition: all 0.3s;
+  background-color: white;
+  color: black;
+}
+
+.dropdown-menu .list:hover {
+  color: #f82249; 
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -296,6 +320,7 @@ h6 {
 .co-btn {
   background-color: transparent;
   border-radius: 20px;
+  transition: all 0.3s;
   border-color: #f82249;
   padding: 7px;
   margin-left: 12px;

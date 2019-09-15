@@ -21,17 +21,22 @@
             Mon espace
           </button>
           <div class="dropdown-menu">
-            <%= link_to 'Éditer mon profil', edit_user_registration_path, style: "color: black;" %>
-            <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, style: "color: black;"  %>
+            <%= link_to(edit_user_registration_path) do %>
+            <p class="list"><i class="fas fa-cog mr-1"></i>Éditer mon profil </p>
+            <% end %>
+            <%= link_to(destroy_user_session_path, method: :delete) do %>
+            <p class="list"><i class="fas fa-user-alt-slash mr-1"></i>Déconnexion</p>
+            <% end %>
           </div>
         </div>
         <% else %>
-        <%= link_to "Connexion", new_user_session_path %> |
-          <%= link_to "Inscription", new_user_registration_path, :class => 'offers'  %></a>
-          <% end %>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
+        <li class="mr-2"><button type="button" class="sign-btn"><%= link_to "Connexion", new_user_session_path %></button></li>
+        <li><button type="button" class="sign-btn"><%= link_to "Inscription", new_user_registration_path %></button></li>
+        <% end %>
+      </ul>
+    </nav><!-- #nav-menu-container -->
+  </div>
+</header><!-- #header -->
 
-  
+
+
