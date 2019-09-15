@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   # ------- Route declarations : ---------
   resources :ads
 
-
+  resources :users, only: [:show, :edit, :update, :destroy]
 end

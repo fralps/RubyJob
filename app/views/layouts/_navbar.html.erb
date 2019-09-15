@@ -21,7 +21,10 @@
             Mon espace
           </button>
           <div class="dropdown-menu">
-            <%= link_to(edit_user_registration_path) do %>
+            <%= link_to(user_path(current_user)) do %>
+            <p class="list"><i class="fas fa-folder-open mr-1"></i>Mes annonces </p>
+            <% end %>
+            <%= link_to(edit_user_path(current_user)) do %>
             <p class="list"><i class="fas fa-cog mr-1"></i>Éditer mon profil </p>
             <% end %>
             <%= link_to(destroy_user_session_path, method: :delete) do %>

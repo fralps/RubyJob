@@ -1,0 +1,33 @@
+<section>
+  <div class="container mt-4 ">
+   <div class="row">
+
+    <div class="col col-md-8 offset-md-2">
+
+      <h4>Éditer mes informations personnelles</h4>
+
+      <!-- Form zone  -->
+      <%= form_tag url_for(action: 'update'), method: "patch", class: "mt-4" do %>
+
+      <b><%= label_tag 'Ma société :' %></b>
+      <%= text_field_tag 'company', @user.company, class: "form-control"  %>
+      <br />
+
+      <%= submit_tag "Éditer mon profil", class: "btn btn-primary" %>
+      <hr>
+      <p>
+        <h4> Éditer les informations liées à mon compte (mot de passe, adresse mail)</h4>
+        <%= link_to "Éditer mot de passe / email", edit_user_registration_path, class: "btn btn-primary" %>
+      </p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-md-8 offset-md-2">
+      <hr>
+      <i class="fas fa-trash-alt text-danger"></i>
+      <%=link_to "Supprimer mon compte", user_path(@user), method: :delete, data: { confirm: 'Êtes-vous sûr(e) ? La suppression du compte est définitive.' }, class: "text-danger" %>
+    </div>
+  </div>
+</section>

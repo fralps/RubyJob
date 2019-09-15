@@ -1,0 +1,42 @@
+<section>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col offset-md-3 col-md-8 mx-auto text-dark">
+                <!-- Errors partial -->
+                <%= render 'ads/error_messages' %>
+                <h2>Créer votre annonce</h2>
+
+                <!-- Zone du formulaire -->
+                <%= form_tag url_for(action: 'create'), method: "post", class: "mt-4" do %>
+
+                <%= label_tag 'Intitulé du poste :', nil, class: "font-weight-bold" %>
+                <%= text_field_tag 'title', @ad.title, class: "form-control" %>
+
+                <%= label_tag 'Localisation :', nil, class: "font-weight-bold" %>
+                <%= text_field_tag 'location', @ad.location, class: "form-control" %>
+
+                <%= label_tag 'Description de l\'entreprise et du poste :', nil, class: "font-weight-bold mt-3" %>
+                <%= text_area_tag 'job_description', @ad.job_description, placeholder: "50 caractères minimum", class: "form-control"  %>
+                
+                <%= label_tag 'Description du profil recherché :', nil, class: "font-weight-bold mt-3" %>
+                <%= text_area_tag 'profile_description', @ad.profile_description, placeholder: "50 caractères minimum", class: "form-control"  %>
+
+                <%= label_tag 'Type de contrat :', nil, class: "font-weight-bold mt-3" %>
+                <%= select_tag 'contract',options_for_select(["CDI", "CDD", "Freelance", "Stage", "Alternance"]), class: "form-control" %>
+
+                <%= label_tag 'Expérience souhaitée :', nil, class: "font-weight-bold mt-3" %>
+                <%= select_tag 'experience',options_for_select(["Très junior", "Junior", "Senior"]), class: "form-control" %>
+
+                <%= label_tag 'Rémunération :', nil, class: "font-weight-bold mt-3" %>
+                <%= text_field_tag 'salary', @ad.salary, class: "form-control" %>
+
+                <%= label_tag 'Email de réception des candidatures :', nil, class: "font-weight-bold mt-3" %>
+                <%= text_field_tag 'email', @ad.email, class: "form-control" %>
+
+                <%= submit_tag "Créer l'annonce", class: "btn btn-primary mb-3 mt-3" %>
+
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
