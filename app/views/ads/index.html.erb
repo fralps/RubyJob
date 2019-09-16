@@ -8,6 +8,7 @@
 		
 		<div class="row">
 			<% @ads.each do |a| %>
+			<%= link_to(ad_path(a.id)) do %>
 			<div class="col col-6">
 				<div class="card mb-5">
 					<img class="card-img-top test" src="<%= a.image_url %>" alt="Card image cap">
@@ -33,6 +34,7 @@
 						<small class="text-muted"><b>Mise en ligne : </b>Hier à <%= a.created_at.localtime.strftime("%H:%M")%></small>
 						<% else %>					
 						<small class="text-muted"><b>Mise en ligne le : </b><%= a.created_at.localtime.strftime("%d/%m/%y") %> à <%= a.created_at.localtime.strftime("%H:%M")%></small>
+						<% end %>
 						<% end %>
 					</div>
 				</div>

@@ -1,59 +1,55 @@
-<section class="mt-3">
+<section id="show">
 	<div class="container">
 		<div class="row">
 			<div class="col col-md-8">
 				<!-- Retour aux annonces < -->
-				<%= link_to user_path do %> 
-				<svg class="icon bg-primary" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					<title>Retour aux annonces</title>
-					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						<polygon points="0 0 24 0 24 24 0 24" opacity="0"></polygon>
-						<path d="M6.70710678,15.7071068 C6.31658249,16.0976311 5.68341751,16.0976311 5.29289322,15.7071068 C4.90236893,15.3165825 4.90236893,14.6834175 5.29289322,14.2928932 L11.2928932,8.29289322 C11.6714722,7.91431428 12.2810586,7.90106866 12.6757246,8.26284586 L18.6757246,13.7628459 C19.0828436,14.1360383 19.1103465,14.7686056 18.7371541,15.1757246 C18.3639617,15.5828436 17.7313944,15.6103465 17.3242754,15.2371541 L12.0300757,10.3841378 L6.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-12.000003, -11.999999) "></path>
-					</g>
-				</svg>
-				<span class="text-small">retour aux annonces</span>
+				<%= link_to ads_path do %> 
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAADYUlEQVRYR+WYzXGbQBTH38OJBScrFQSpgcgVRDlkBp0sVxC5AisVRK7AcgWRKwg+wUwOkSswaQBIB+QE8ti8zCIgy2qBxR8znkQ3ab9++z7/K4QX9sEXxgP/BlBsWmPU8AiIRgDYB4RRZmkCD4AiQPT2UrBfh851Vw8oW4jMcf9W00+JcA4IfaWDCCJEWu6nyQWG60hljRLQxpxMCekcEE2VTXfmEIVI+LkXOnbb+lagZDhZAsApvxER/EIEm1Ky9+A+2g+/e2z81vw4uoe9Pmo4JYIpIrzl1yHQoue7Z01QjUDxwFoh4qdiAwYCRAsjdFdtN2XjsWnNAHHBgyHQque7J3Xra4F2LEN01aNkphoL5SXMcX+D+goQj8rfgM4M313IoKRAWcxo8O2vZejSCNyZilXq5ojWxhSOZTG1A8SyaYP6TRnARFd64E4fA1OsTQaWXVqKKNQDdyDuuwMUD60FAn7JygrBL53iUVc31cGzyyZoeEVMkcR1O0DJ0IoA8CADSulEJYCZO1RdygIdNfyaF9JID5w31UzkvuUV+EdhHSNwWutOERu677SWkOKoeDAJCytp6d1hUTbYeGUTIbMudN+ZN8UOH6hdgJrOqQDFg8kaEd7n7vpghO5aNWu6APFZTATXRuCMi3OqFhpYHiC+Y4OiKXkwMYW3piZpXZFVZlbRU+3VTR5Hnh44h3Kg4YSKgboby2Ca3Fq3T1JzlhhD7UB8ligUp8cBqbpMAsVqioxP1iKqLqOfeuBu9ZSYZXxQ15X2MnUFqOcJ6qrUaE97DqoLkBCHlXMqMSSYUtprRLcUlbcbkGJhZIc9qHWY1kylxbD9K60D6LfuuxU53NhcgSjsUXL4lM11g0ZQaHKl5prdgus1AGDrvnOskOGtU3j5wZSErFcqCbQ22dlKkl2yKoeVBVqZ1pwuyn+ze2l80tV9meDTDCY3SpEnc5W0Du1kkHArIIg0ovl+6F4qWYWVBcRz/h1H1CyHWzUMryBLCPbOQlhDSrYGWlS8UJme0oAOYPsMGovvuCbLKFmomMTkQoqwFN9ZKlZic1gAawTzJ3koVmTH0FoA4UwVLH9QLnXfYY9NpU+ry2S75BV9RrT9k6EUdQTZnwuI4Gnp3YqXpko0YnNVXfSc8x5kof8K6A8A7t80USwSEwAAAABJRU5ErkJggg=="/>
+				<span class="text-small" id="link">retour aux annonces</span>
 				<% end %>
 			</div>
 		</div>
 		<!-- Ad show -->
-		<div class="row mt-2">
-			<div class="col col-md-8 offset-md-2">
-				<h2 class="mt-2 text-center"><%= @ad.title%></h2>
-				<hr class="mb-3">
-
-				<p class="mb-1"><b>Description du poste :</b></p>
-				<p><%= @ad.job_description %></p>
+		<div class="row">
+			<div class="col col-4 mt-2">
+				<p><img class="mr-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAADcElEQVRYR+1XS1LbQBB9PaSQtAqcILIvEHOCmEWq5BXkBJgTACcAToBzAuAEgZVUlQXmBJgLWMoNzEqCCuqURkgeyZJGgg1JRUvN783rfq97CO/so3eGB/8GoNB2bALvQIghGDYIA8k0YwZCgDieMujaCrygawQ6MZQAEQLHDBq3OYjAF3GM0y7AWgN6tEe7TDgHYaMNmHwOY0GMfSNwr9qsawUotJ0xCTpXN2TGLZgv1vA8Ww9+zpKxJ/vr4BlrAxCNifClMD/mfSvwLnSgtIAkMwI/ljfme2YcWoE3bdo8tJ0hESYg+pzNoxjfdEw1ApLJS3SXh4n53uBoSMF0obupzHF7uPFI5jQHxVgYHPaa1jcD6jkXRLSXKmgVjAwl0YGqMsE8WQ+8ywxwGRQzX1q+VyuKWkCSHUF+vnHM21mY0kOsmxxImS7GzOBwO2NChk/QjbJXr055tYCi/ugQwFlKDm4t3x1mG0Y9Z6bmRmX4GDPTd7eysbA3miqJfmTO3UnVunpAPecKRDsSkKIQFejLhkcccyppgTGBjhUmcmUVlMp8bfrebldAOQsi/r2VSbvEzspNw75zkoNSWEosIRYf7tJ8LLKnAmsKGWcTzbmbz4v6o/y/EYebZcWUc69urfr/bwXkLAD6KFOjJmQMPrXm3ol6w2LI+N70PVl4i0rjB3PuVZagetkrqlAdtpzUBD6JY0jfEQJ7DMoBqmJQHb+s2rYhS2R5kMq+aGbtZL9kRzKkmizw3Zy7ia2sfE3GuDQzxsL03c06913ZtcLVo351CpTXakrHKCDCp7IX5WYnSwcOl7VKFt5JuaqrHsSMX5bv2pVmCjS3sKUEDUzf69Vt1PQ/7C0vBqDWpZM9GhmSNUuYQaa2KlXpABYuBX4w4sh+dbVPDiurSrUAHZiCO6eTG9nRMpTniloYmQODoy1dT/TSdtyBSOZLk9Rbyb5gdrIVwSwLHZinpu9tNzFUtAZ+4BiDNs2+toUtKErpq5MXhTH39qtAlTyn0C3owtwakDQ3tZJLRayCWgFTUV6aQHUCVOG4EtR6HB0lY0/CPFPfbLp2tZNTN/uK0mvLjE3yS1KWvmAryo0uVNl4Z4aWyiuBUk58DTNvBiTDV/WAbPkgrGPs1Qwp6huCKH2RMo91D0hd6N4MSHdA1/H/gHSM/QEIMRFDci3blwAAAABJRU5ErkJggg=="/><%= @ad.location %></p>
 				<hr>
 
-				<p><b>Localisation : </b><%= @ad.location %></p>
-				<hr>	
-
-				<p><b>Description du profil : </b><%= @ad.profile_description %></p>
+				<p><img class="mr-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABGklEQVRYR+2XXxKCIBDGd33SU6SeRk9RN8luUqfQ0yidwp6ksX+DZrIbMOmET4yw8OPb/VAQFvbgwnjAA+kyMlCojbM4CGCrCxr3dx2cIlEJbtzU+CFQkgtE2LAnllKETZWw4yYCBkCXNJffThrWpZV69EC6DHxUSE2BmkrKe92ic/1OgDhuHTvUDRDHrSOHOilqrlvVMvBAUwVNUojiJor7egAJ8hDVVdG32zQrEHCvgjkBQpC3Be8A+Gr/DGjubLGikMnhxo0lpYw7qcn4dQJxXea8hjzQQ2Jrn47/K2qTHXNj12l77i5Nxq9HoZbz62kiiRIrJZyjpoyfr96u0hDAztJatGk6OKrXcCu3TdrKtFEeSKfT4hS6ApyADjTRwmn0AAAAAElFTkSuQmCC"/><%= @ad.user.company %></p>
 				<hr>
 
-				<p><b>Expérience souhaitée : </b><%= @ad.experience %></p>
+				<p><i class="fas fa-user-graduate mr-3"></i><%= @ad.experience %></p>
 				<hr>
 
-				<p><b>Type de contrat : </b><%= @ad.contract %></p>
+				<p><i class="fas fa-file-signature mr-1"></i><%= @ad.contract %></p>
 				<hr>
 
-				<p><b>Rémunération : </b><%= @ad.salary%></p>
+				<p><img class="mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACNUlEQVRYR+2Xz3HaQBTGvyfGFhxTQRQaCKkg+JAZOMUdBFcQdxCnguAKLHcgn9BMLrgDaABUgjhJyYT9MisjEMGwK8VkyIx01D7t/vZ7fyU4sUdOjAc1kMkjtUJHV+iH17+Ew48kPIh0swPJCCITRzE4Q/og0Tg2geTrlV2WeL2uCO4g4h08jIhFODxX6a0NWCWgtN0fAvhse+sn1TBxmVyYoEoDJW96voh82sBwAYhPxaAVhWP9/qf3obNEowORgQjer23JaXMedg5dpBRQ2u5fA/hWOODBZTo4dOvNN1w4atk9j75PXgQo8XqeODLPNyN535qHAxu3rRSLW1EYmeytFdpylYX0poP3re8FStq9G0eH4uoh5KawSSDgjvRK4TGPoxcHStv9NYzt5gS/tmZhEdz207XdXoVODki7bJNNWfq+firCvIfg+eBUGB/NZUWti2o1ZyPrRCjtL8BuHioCuSp5Zaq2VUCMvayYZSQGec8S0Aeed1mdZSZXHDXtt7IsCzb5UuxhFOz2pH+VZRpku3Vg0pyP3pkUq7JuncJ/Nlcd3O4svLI5VA9zDSxjU6fXe1kDaeOd8QMIXJVcWY0fROzw14UJqhTQjuuy0o0YAr+hEJxFo0f9So8bQOOtErmGYDOQWUwJpYFWSlUYYTl1mXZNRbUSUKaU1+tCxM973P5Y4oLA0HYKqAyUA+jfICW8BMRbz8/kVFdzEkETaWBSpXiZvwayybIyNjWQSa1aof9Ood+63Qs0QQY9PgAAAABJRU5ErkJggg=="/><%= @ad.salary%>€</p>
 				<hr>
 
-				<p><b>Email de réception des candidatures : </b><%= @ad.email%></p>
+				<p><img class="mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACBUlEQVRYR+2XXU7CQBCAZ1aD5UmOULmAHIEXE3jSG1hOIJwAOQHcgHoDfbKJLx4BLwA9AjzRENkxpbRuf2h3CjGYlNftzH6db3a6IJzZD8+MByqgIiNVhY6qkNfsToDoHhDNokTsdSIXEeyruTNSYw8q28EAPLE3YgYQ0Kg+d57DsBygzhIAr5n5+Y8TucbCudEA6lK8lGTXpDdA93PJ3zWIILPd2AhjTICWmsOYv0eFyVMWAwoywkzQd6/mfsy4UBvzriXxcgoIrWRseaAAaklEg7rr2LpQa7NjIeIYEBpZMWwgktRDARO1pxCKFWYrohVJ6KPAaQjHBvIDgpJf2IB4G71ljsJMRURfgraWr9xr/vZoKaCwKT00Joj4qEClFGYpIqIXg7x+eChOAhRC7DbMUCgljISAYfwUBYqSPccGWjc70bBSB1cIlakw2bGKouQSG0jnBPlNm1K4D0wqKgWkUucBJcd9XGG2oj8F8jdbmx0TBFggwa67jltUYS1lZStUtHnWuhZQmcRlY9hA/ikT/oci55e8y3Dg2EA6+tQJy4Hxn/3/QOpgPPT26sDUUazmIcBo8Gp9y45RwIolejMWzkMYo/03yK8AAg5TX4f9nVin59KgtBJy21YvfCcD0lEcA5LgGuC9Jq/EJwNiacp5WBvoVBsW5amAqgoVVaBo/ex66Ac8lFQ0Ek+1eAAAAABJRU5ErkJggg=="/><a id="link" href="mailto:<% @ad.email %>"><%= @ad.email %></a></p>
 				<hr>
 
 				<% if  @ad.created_at.localtime.strftime("%d/%m/%y") == Time.now.strftime("%d/%m/%y") %>
-				<p><b>Mise en ligne : </b>Aujourd'hui à <%=@ad.created_at.localtime.strftime("%H:%M")%></p>
-				<hr>
+				<p><img class="mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAC90lEQVRYR+1WQVLbMBR932Wwsyo9Qe1cgHCCetMZZ1U4AXCCwgkKJ2h6AtITlF0800XDCXAvkJgbJCubDuh3ZMe27FiR03bBTONdIunr6b3/nkR4YR+9MDzYATIpsmPo/2Lol/t+ALw6ZAtudnLBEUE87MffIxMTuvE/6qGkH1wR4xREOZDmxxwTYbwv0i8UTxfbgNsKkGRE0N4NCINOmzDHFj+fbMNYZ0ArMD9AOKjA8JKZIiJEDF4QYwCCD9BrFTALPu/F4bjLIToBStzAJaL7CgwvGRg5Ih21SZK4wRlZGKnALPF01IWpboC84ZQI7/IT8tISz76peH4I3ILoMF/Gsc3pkamnjIAe3eExW/hW0N31pHJ+BspCpDB16cwmo03SaQElbuAT4UZ1EjN/7c3Dsy69UMzJ5aObgiVnHnpbA6oVUVazYK8Xh3GzoJwv/9M1btoPFgVLuhpFzTWG2sBIZsCYtm2Yuc/au5cFdXKmXiB76YOcQ+ArexZedwpGdv2DR+rNSzcx/7Q59XWNuD4fC5sTrzk/C1LQpxKEDE6mSzue3DaB1RhSFzLjweFksMkVqRdEpYuKyozImU+O1I3WAK0G2/KpBkjdgARO2k5QNqsXjInotI16Ao/tWXiuNLYPCz4YMgqO1Xxq9lQdUH/I5UE1Dbyyc+UcTTPo0jmX2ZkWzDadqwVki+RNm1xqE5vsr2vyWrY1JN5asrQ/vGBwdZ8xybzKUpwZdyCeVhamhS4IU0UNZzYpcTQZkin6MQ+x9eZsY6RmBPB1bxZemZirpz8vnVlYHrDusizqaa4UvLVFcr7JadsCWkWFfDVkT5iNPSQnSEkAfK4yAwuA5ROjlEII3PXiMPutAySvHssqLuSymstMx+oTZqPLimVpf1hJ18I/K9JoATXDsK1OyztJe7lKnQVhRIS3zVp/C0iGrsW4MCZ1WzOubO7XnCWyey2XzA3y0JOf7n+lsCUo2hS4xveQyTH/enwHyMTojqEdQyYGTOO/AahMvjS4NPZ9AAAAAElFTkSuQmCC"/>Aujourd'hui à <%=@ad.created_at.localtime.strftime("%H:%M")%></p>
 				<% elsif @ad.created_at.strftime("%d/%m/%y") == Time.now.yesterday.strftime("%d/%m/%y") %>
-				<p><b>Mise en ligne : </b>Hier à <%=@ad.created_at.localtime.strftime("%H:%M")%></p>
-				<hr>
+				<p><img class="mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAC90lEQVRYR+1WQVLbMBR932Wwsyo9Qe1cgHCCetMZZ1U4AXCCwgkKJ2h6AtITlF0800XDCXAvkJgbJCubDuh3ZMe27FiR03bBTONdIunr6b3/nkR4YR+9MDzYATIpsmPo/2Lol/t+ALw6ZAtudnLBEUE87MffIxMTuvE/6qGkH1wR4xREOZDmxxwTYbwv0i8UTxfbgNsKkGRE0N4NCINOmzDHFj+fbMNYZ0ArMD9AOKjA8JKZIiJEDF4QYwCCD9BrFTALPu/F4bjLIToBStzAJaL7CgwvGRg5Ih21SZK4wRlZGKnALPF01IWpboC84ZQI7/IT8tISz76peH4I3ILoMF/Gsc3pkamnjIAe3eExW/hW0N31pHJ+BspCpDB16cwmo03SaQElbuAT4UZ1EjN/7c3Dsy69UMzJ5aObgiVnHnpbA6oVUVazYK8Xh3GzoJwv/9M1btoPFgVLuhpFzTWG2sBIZsCYtm2Yuc/au5cFdXKmXiB76YOcQ+ArexZedwpGdv2DR+rNSzcx/7Q59XWNuD4fC5sTrzk/C1LQpxKEDE6mSzue3DaB1RhSFzLjweFksMkVqRdEpYuKyozImU+O1I3WAK0G2/KpBkjdgARO2k5QNqsXjInotI16Ao/tWXiuNLYPCz4YMgqO1Xxq9lQdUH/I5UE1Dbyyc+UcTTPo0jmX2ZkWzDadqwVki+RNm1xqE5vsr2vyWrY1JN5asrQ/vGBwdZ8xybzKUpwZdyCeVhamhS4IU0UNZzYpcTQZkin6MQ+x9eZsY6RmBPB1bxZemZirpz8vnVlYHrDusizqaa4UvLVFcr7JadsCWkWFfDVkT5iNPSQnSEkAfK4yAwuA5ROjlEII3PXiMPutAySvHssqLuSymstMx+oTZqPLimVpf1hJ18I/K9JoATXDsK1OyztJe7lKnQVhRIS3zVp/C0iGrsW4MCZ1WzOubO7XnCWyey2XzA3y0JOf7n+lsCUo2hS4xveQyTH/enwHyMTojqEdQyYGTOO/AahMvjS4NPZ9AAAAAElFTkSuQmCC"/>Hier à <%=@ad.created_at.localtime.strftime("%H:%M")%></p>
 				<% else %>					
-				<p><b>Mise en ligne le : </b><%= @ad.created_at.localtime.strftime("%d/%m/%y") %> à <%=@ad.created_at.localtime.strftime("%H:%M")%></p>
-				<hr>
+				<p><img class="mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAC90lEQVRYR+1WQVLbMBR932Wwsyo9Qe1cgHCCetMZZ1U4AXCCwgkKJ2h6AtITlF0800XDCXAvkJgbJCubDuh3ZMe27FiR03bBTONdIunr6b3/nkR4YR+9MDzYATIpsmPo/2Lol/t+ALw6ZAtudnLBEUE87MffIxMTuvE/6qGkH1wR4xREOZDmxxwTYbwv0i8UTxfbgNsKkGRE0N4NCINOmzDHFj+fbMNYZ0ArMD9AOKjA8JKZIiJEDF4QYwCCD9BrFTALPu/F4bjLIToBStzAJaL7CgwvGRg5Ih21SZK4wRlZGKnALPF01IWpboC84ZQI7/IT8tISz76peH4I3ILoMF/Gsc3pkamnjIAe3eExW/hW0N31pHJ+BspCpDB16cwmo03SaQElbuAT4UZ1EjN/7c3Dsy69UMzJ5aObgiVnHnpbA6oVUVazYK8Xh3GzoJwv/9M1btoPFgVLuhpFzTWG2sBIZsCYtm2Yuc/au5cFdXKmXiB76YOcQ+ArexZedwpGdv2DR+rNSzcx/7Q59XWNuD4fC5sTrzk/C1LQpxKEDE6mSzue3DaB1RhSFzLjweFksMkVqRdEpYuKyozImU+O1I3WAK0G2/KpBkjdgARO2k5QNqsXjInotI16Ao/tWXiuNLYPCz4YMgqO1Xxq9lQdUH/I5UE1Dbyyc+UcTTPo0jmX2ZkWzDadqwVki+RNm1xqE5vsr2vyWrY1JN5asrQ/vGBwdZ8xybzKUpwZdyCeVhamhS4IU0UNZzYpcTQZkin6MQ+x9eZsY6RmBPB1bxZemZirpz8vnVlYHrDusizqaa4UvLVFcr7JadsCWkWFfDVkT5iNPSQnSEkAfK4yAwuA5ROjlEII3PXiMPutAySvHssqLuSymstMx+oTZqPLimVpf1hJ18I/K9JoATXDsK1OyztJe7lKnQVhRIS3zVp/C0iGrsW4MCZ1WzOubO7XnCWyey2XzA3y0JOf7n+lsCUo2hS4xveQyTH/enwHyMTojqEdQyYGTOO/AahMvjS4NPZ9AAAAAElFTkSuQmCC"/><%= @ad.created_at.localtime.strftime("%d/%m/%y") %> à <%=@ad.created_at.localtime.strftime("%H:%M")%></p>
 				<% end %>
+			</div>
+			<div class="col col-8">
+				<h2 class="mt-1 text-center"><%= @ad.title%></h2>
+				<hr>
+
+				<p><b>Description du poste :</b></p>
+				<p><%= @ad.job_description %></p>
+				<hr>
+
+				<p><b>Description du profil : </b></p>
+				<p><%= @ad.profile_description %></p>
 			</div>
 		</div>
 	</div>
+</div>
 </section>
