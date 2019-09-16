@@ -20,7 +20,6 @@
 //= require superfish/superfish.min
 //= require wow/wow.min
 //= require venobox/venobox.min
-//= require owlcarousel/owl.carousel.min
 //= require contactform/contactform
 //= require js/main
 

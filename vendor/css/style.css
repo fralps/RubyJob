@@ -770,97 +770,49 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #485B6F;
 }
 
-#index .ad {
+#index .card {
   border: 1px solid #e0e5fa;
   background: #fff;
   margin-bottom: 30px;
 }
 
-#index .ad:hover .ad-img img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+/*---------- Ad hover effect on ads index cards ------------*/
+#index .card:hover {
+  box-shadow: 0.4rem 0.4rem rgba(248, 34, 73, 0.6);
+  transform: translate3d(0, -10px, 0);
 }
 
-#index .ad-img {
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-#index .ad-img img {
-  transition: 0.3s ease-in-out;
-}
-
-#index h3 {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 5px;
-  padding: 0 20px;
-}
-
-#index a {
-  color: #152b79;
-}
-
-#index a:hover {
-  color: #f82249;
+#index .card {
+  transition: 0.2s;
 }
 
 #index p {
   padding: 0 20px;
   margin-bottom: 20px;
   color: black;
-  font-style: italic;
   font-size: 15px;
+}
+
+#index span {
+  font-style: italic;
+}
+
+#index i {
+  color: #f82249;
+}
+
+#index h1 {
+  color: #f82249;
+  text-align: center;
 }
 
 #index h2 {
   color: #f82249;
 }
 
-/*--------------------------------------------------------------
-# Gallery Section
---------------------------------------------------------------*/
-
-#gallery {
-  padding: 60px;
-  overflow: hidden;
-}
-
-#gallery .owl-nav,
-#gallery .owl-dots {
-  margin-top: 25px;
+#index h6 {
+  color: white;
   text-align: center;
-}
-
-#gallery .owl-item {
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-}
-
-#gallery .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-
-#gallery .owl-dot.active {
-  background-color: #f82249;
-}
-
-#gallery .gallery-carousel .owl-stage-outer {
-  overflow: visible;
-}
-
-#gallery .gallery-carousel .center {
-  border: 6px solid #f82249;
-  margin: -10px;
-  box-sizing: content-box;
-  padding: 4px;
-  background: #fff;
-  z-index: 1;
 }
 
 /*--------------------------------------------------------------

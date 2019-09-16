@@ -15,7 +15,7 @@ class AdsController < ApplicationController
 	end
 
 	def create
-	@ad = Ad.new(user_id: current_user.id, title: params[:title], location: params[:location], job_description: params[:job_description], profile_description: params[:profile_description], contract: params[:contract], salary: params[:salary], experience: params[:experience], email: params[:email])
+	@ad = Ad.new(user_id: current_user.id, title: params[:title], location: params[:location], job_description: params[:job_description], profile_description: params[:profile_description], contract: params[:contract], salary: params[:salary], experience: params[:experience], email: params[:email], image_url: params[:image_url])
 
 		if @ad.save
 			redirect_to user_path(current_user)

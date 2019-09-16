@@ -16,7 +16,6 @@
 *= require font-awesome/css/font-awesome.min
 *= require animate/animate.min
 *= require venobox/venobox
-*= require owlcarousel/assets/owl.carousel.min
 *= require css/style
 
  *= require_tree .

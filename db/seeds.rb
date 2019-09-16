@@ -35,14 +35,15 @@ end
 10.times do
 	ad = Ad.create!(
 		title: ["Développeur Fullstack Ruby On Rails", "Développeur Web Ruby On Rails", "Développeur Backend Ruby"].sample,
-		job_description: Faker::Lorem.paragraph_by_chars(number: 100, supplemental: false),
-		profile_description: Faker::Lorem.paragraph_by_chars(number: 100, supplemental: false),
+		job_description: Faker::Lorem.paragraph_by_chars(number: 1000, supplemental: false),
+		profile_description: Faker::Lorem.paragraph_by_chars(number: 1000, supplemental: false),
 		salary: rand(1800..3000),
 		location: Faker::Address.city,
-		contract: Faker::Job.employment_type,
+		contract: ["CDI", "CDD", "Freelance", "Stage", "Alternance"].sample,
 		email: Faker::Internet.email,
-		experience: Faker::Job.seniority,
-		user_id: rand(1..20))
+		experience: ["Très junior", "Junior", "Sénior"].sample,
+		user_id: rand(1..20),
+		image_url: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80", "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", "https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80", "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"].sample)
 
 	# Puts to show every time an item is added
 	puts "Ad added".blue

@@ -33,6 +33,9 @@
                 <%= label_tag 'Email de réception des candidatures :', nil, class: "font-weight-bold mt-3" %>
                 <%= text_field_tag 'email', @ad.email, class: "form-control" %>
 
+                <%= label_tag 'Image d\'illustration pour votre annonce :', nil, class: "font-weight-bold" %>
+                <%= text_field_tag 'image_url', @ad.image_url, class: "form-control" %>
+
                 <%= submit_tag "Créer l'annonce", class: "btn btn-primary mb-3 mt-3" %>
 
                 <% end %>
