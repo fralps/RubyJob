@@ -1,10 +1,11 @@
-<section>
-    <div class="container mt-3">
+<section id="edit" class="text-light">
+    <div class="container">
         <div class="row">
-            <div class="col offset-md-3 col-md-8 mx-auto text-dark">
+            <div class="col col-md-6 offset-md-3">
                 <!-- Errors partial -->
                 <%= render 'ads/error_messages' %>
-                <h2>Créer votre annonce</h2>
+                <h1>Créer votre annonce</h1>
+                <hr>
 
                 <!-- Zone du formulaire -->
                 <%= form_tag url_for(action: 'create'), method: "post", class: "mt-4" do %>
@@ -12,7 +13,7 @@
                 <%= label_tag 'Intitulé du poste :', nil, class: "font-weight-bold" %>
                 <%= text_field_tag 'title', @ad.title, class: "form-control" %>
 
-                <%= label_tag 'Localisation :', nil, class: "font-weight-bold" %>
+                <%= label_tag 'Localisation :', nil, class: "font-weight-bold mt-3" %>
                 <%= text_field_tag 'location', @ad.location, class: "form-control" %>
 
                 <%= label_tag 'Description de l\'entreprise et du poste :', nil, class: "font-weight-bold mt-3" %>
@@ -33,10 +34,10 @@
                 <%= label_tag 'Email de réception des candidatures :', nil, class: "font-weight-bold mt-3" %>
                 <%= text_field_tag 'email', @ad.email, class: "form-control" %>
 
-                <%= label_tag 'Image d\'illustration pour votre annonce :', nil, class: "font-weight-bold" %>
+                <%= label_tag 'Url d\'image d\'illustration pour votre annonce :', nil, class: "font-weight-bold mt-3" %>
                 <%= text_field_tag 'image_url', @ad.image_url, class: "form-control" %>
 
-                <%= submit_tag "Créer l'annonce", class: "btn btn-primary mb-3 mt-3" %>
+                <%= submit_tag "Créer l'annonce", class: " form-control btn devise-btn mt-3" %>
 
                 <% end %>
             </div>

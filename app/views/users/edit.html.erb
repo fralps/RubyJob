@@ -1,10 +1,11 @@
-<section>
-  <div class="container mt-4 ">
+<section id="edit" class="text-light">
+  <div class="container">
    <div class="row">
 
     <div class="col col-md-8 offset-md-2">
 
-      <h4>Éditer mes informations personnelles</h4>
+      <h1>Éditer mes informations personnelles</h1>
+      <hr>
 
       <!-- Form zone  -->
       <%= form_tag url_for(action: 'update'), method: "patch", class: "mt-4" do %>
@@ -13,11 +14,11 @@
       <%= text_field_tag 'company', @user.company, class: "form-control"  %>
       <br />
 
-      <%= submit_tag "Éditer mon profil", class: "btn btn-primary" %>
+      <%= submit_tag "Sauvegarder", class: "btn devise-btn btn-sm" %>
       <hr>
       <p>
-        <h4> Éditer les informations liées à mon compte (mot de passe, adresse mail)</h4>
-        <%= link_to "Éditer mot de passe / email", edit_user_registration_path, class: "btn btn-primary" %>
+        <p> Éditer les informations liées à mon compte (mot de passe, adresse mail)</p>
+        <%= link_to "Éditer mot de passe / email", edit_user_registration_path, class: "btn devise-btn btn-sm" %>
       </p>
       <% end %>
     </div>

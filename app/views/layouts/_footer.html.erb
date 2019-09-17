@@ -12,7 +12,9 @@
             <div class="col-lg-4 col-md-6 footer-links">
                 <h4>Liens utiles</h4>
                 <ul>
-                    <li><i class="fa fa-angle-right"></i> <a href="#intro">Accueil</a></li>
+                    <%= link_to(root_path) do %>
+                    <li><i class="fa fa-angle-right"></i>Accueil</li>
+                    <% end %>
                     <li><i class="fa fa-angle-right"></i> <a href="#about">Le concept</a></li>
                 </ul>
             </div>

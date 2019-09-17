@@ -1,8 +1,9 @@
-<section>
-  <div class="container mt-5 mb-5">
+<section id="connexion" class="text-light">
+  <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h2>Connexion</h2>
+        <h1>Connexion</h1>
+        <hr>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field mb-3">
@@ -23,7 +24,7 @@
         <% end %>
 
         <div class="actions mb-3">
-          <%= f.submit "Je me connecte", class: "form-control btn btn-primary" %>
+          <%= f.submit "Je me connecte", class: "form-control btn devise-btn" %>
         </div>
         <% end %>
 

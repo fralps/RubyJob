@@ -21,6 +21,9 @@
             Mon espace
           </button>
           <div class="dropdown-menu">
+            <%= link_to(new_ad_path) do %>
+            <p class="list"><i class="fas fa-plus-square mr-1"></i>Nouvelle annonce</p>
+            <% end %>
             <%= link_to(user_path(current_user)) do %>
             <p class="list"><i class="fas fa-folder-open mr-1"></i>Mes annonces </p>
             <% end %>
@@ -33,7 +36,7 @@
           </div>
         </div>
         <% else %>
-        <li class="mr-2"><button type="button" class="sign-btn"><%= link_to "Connexion", new_user_session_path %></button></li>
+        <li class="mr-2"><button type="button" class="sign-btn" ><%= link_to "Connexion", new_user_session_path %></button></li>
         <li><button type="button" class="sign-btn"><%= link_to "Inscription", new_user_registration_path %></button></li>
         <% end %>
       </ul>

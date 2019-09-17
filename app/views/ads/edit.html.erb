@@ -1,8 +1,9 @@
 <section id="edit" class="text-light">
   <div class="container">
     <div class="row">
-      <div class="col col-md-8 offset-md-2">
-        <h1 class="text-center">Éditer mon annonce</h1>
+      <div class="col col-md-6 offset-md-3">
+        <h1>Éditer mon annonce</h1>
+        <hr>
 
         <!-- Errors partial -->
         <%= render 'ads/error_messages' %>
@@ -12,7 +13,7 @@
         <%= label_tag 'Intitulé du poste :', nil, class: "font-weight-bold" %>
         <%= text_field_tag 'title', @ad.title, class: "form-control" %>
 
-        <%= label_tag 'Localisation :', nil, class: "font-weight-bold" %>
+        <%= label_tag 'Localisation :', nil, class: "font-weight-bold mt-3" %>
         <%= text_field_tag 'location', @ad.location, class: "form-control" %>
 
         <%= label_tag 'Description de l\'entreprise et du poste :', nil, class: "font-weight-bold mt-3" %>
@@ -33,10 +34,17 @@
         <%= label_tag 'Email de réception des candidatures :', nil, class: "font-weight-bold mt-3" %>
         <%= text_field_tag 'email', @ad.email, class: "form-control" %>
 
-        <%= submit_tag "Modifier l'annonce", class: "btn btn-primary mt-2 mb-1" %>
-        <% end %>
+        <%= label_tag 'Url de l\'image de l\'annonce :', nil, class: "font-weight-bold mt-3" %>
+        <%= text_field_tag 'image_url', @ad.image_url, class: "form-control" %>
 
-        <%= link_to "Supprimer l'annonce", ad_path(@ad), method: :delete, data: { confirm: 'Êtes-vous sûr(e) ?' }, class: "btn btn-danger mt-2 mb-1" %>
+        <%= submit_tag "Sauvegarder", class: "btn form-control devise-btn mt-3 mb-3" %>
+        <% end %>
+        <hr>
+        <div class="text-center">
+            <%= link_to(ad_path(@ad), method: :delete, data: { confirm: 'Êtes-vous sûr(e) ?'}) do %>
+            <img class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABPElEQVRYR+2YzY3CQAyF7QEBOUEJYSugBC5I3KAEKIEKNnRAB9ACJ5D2QglUACkBTgEkYrSRIkUwZOyElVjkHBPb8/S9zI8H4c0efDM98L8FXfxeJzbVbwAYssgSbQxdJ7XwZ8uKB+ATIr/bOqO3B4QWt3gSR3CoU9TGcHPg5LEti/z+CA3OOUUtMZPGbjXj5PIFffUDBPy1Cwho6u3WQd4AkTA+raWCXLY9EMqidiWX/W6zXgVlqbIIZROKzpR7KyV1cmeZpNCrloDPEPSMnPS9jWohQtKBJdarINc+qISUkO3MpLMsPT1K1yddGF3kXkZIelL8859aBaUESjaHVpAU09gL14tnlHP3sqR9No0QAJtSm+zxdKzHJz+vrXY2iskFA1YCQByUEkW0NHQNXBcPTkGlRBRIVkEuaDdBZRpDmYElOAAAAABJRU5ErkJggg=="/>Supprimer mon annonce
+            <% end %>
+        </div>
     </div>
 </div>
 </div>

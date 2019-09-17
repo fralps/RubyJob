@@ -762,6 +762,43 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
+# Connexion Section
+--------------------------------------------------------------*/
+
+#connexion {
+  padding: 150px 0;
+  background: #485B6F;
+}
+
+#connexion h1 {
+  color: #f82249;
+  text-align: center;
+}
+
+#connexion hr {
+  background-color: white;
+}
+
+.co {
+  color: white;
+}
+.co:hover {
+  color: #f82249;
+  transition: 0.7s;
+}
+
+.devise-btn {
+  background-color: #f82249;
+  border: none;
+  color: white;
+}
+
+.devise-btn:hover {
+  background-color: #e0072f;
+  transition: 0.4s;
+}
+
+/*--------------------------------------------------------------
 # Ads Section
 --------------------------------------------------------------*/
 
@@ -815,6 +852,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: white;
   text-align: center;
 }
+ #index hr {
+  background-color: white;
+ }
 
 #show {
   padding: 150px 0;
@@ -868,6 +908,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 #edit h1 {
   color: #f82249;
   text-align: center;
+}
+
+#edit hr {
+  background-color: white;
+}
+
+/*Keep return and space for the text area tag*/
+.format {
+  white-space: pre-line; 
+  white-space: pre-wrap;
 }
 
 /*--------------------------------------------------------------
@@ -968,12 +1018,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #e0072f;
 }
 
-#offers #buy-ticket-modal input,
-#offers #buy-ticket-modal select {
+#offers #offer-ticket-modal input,
+#offers #offer-ticket-modal select {
   border-radius: 0;
 }
 
-#offers #buy-ticket-modal .btn {
+#offers #offer-ticket-modal .btn {
   font-size: 15px;
   border-radius: 50px;
   padding: 10px 40px;
@@ -983,7 +1033,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#offers #buy-ticket-modal .btn:hover {
+#offers #offer-ticket-modal .btn:hover {
   background-color: #e0072f;
 }
 
