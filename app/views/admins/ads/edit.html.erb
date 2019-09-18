@@ -1,0 +1,65 @@
+<section id="edit" class="text-light">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <!-- Partial for the dashboard menu -->
+            <%= render 'admins/dashboard' %>
+
+            <!-- Main content -->
+            <div class="col-sm-12 col-md-9">
+                <div class="container">
+                    <!-- Ads -->
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="mt-1"><i class="fas fa-sticky-note"></i> Éditer l'annonce</h4>
+                            <hr>
+                            <!-- Errors partial -->
+                            <%= render 'ads/error_messages' %>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mx-2">
+                            <!-- Zone du formulaire -->
+                            <%= form_tag url_for(action: 'update'), method: "patch", class: "mt-4" do %>
+
+                            <%= label_tag 'Intitulé du poste :', nil, class: "font-weight-bold" %>
+                            <%= text_field_tag 'title', @ad.title, class: "form-control" %>
+
+                            <%= label_tag 'Localisation :', nil, class: "font-weight-bold mt-3" %>
+                            <%= text_field_tag 'location', @ad.location, class: "form-control" %>
+
+                            <%= label_tag 'Description de l\'entreprise et du poste :', nil, class: "font-weight-bold mt-3" %>
+                            <%= text_area_tag 'job_description', @ad.job_description, placeholder: "50 caractères minimum", class: "form-control"  %>
+
+                            <%= label_tag 'Description du profil recherché :', nil, class: "font-weight-bold mt-3" %>
+                            <%= text_area_tag 'profile_description', @ad.profile_description, placeholder: "50 caractères minimum", class: "form-control"  %>
+
+                            <%= label_tag 'Type de contrat :', nil, class: "font-weight-bold mt-3" %>
+                            <%= select_tag 'contract',options_for_select(["CDI", "CDD", "Freelance", "Stage", "Alternance"]), class: "form-control" %>
+
+                            <%= label_tag 'Expérience souhaitée :', nil, class: "font-weight-bold mt-3" %>
+                            <%= select_tag 'experience',options_for_select(["Très junior", "Junior", "Senior"]), class: "form-control" %>
+
+                            <%= label_tag 'Rémunération :', nil, class: "font-weight-bold mt-3" %>
+                            <%= text_field_tag 'salary', @ad.salary, class: "form-control" %>
+
+                            <%= label_tag 'Email de réception des candidatures :', nil, class: "font-weight-bold mt-3" %>
+                            <%= text_field_tag 'email', @ad.email, class: "form-control" %>
+
+                            <%= label_tag 'Url de l\'image de l\'annonce :', nil, class: "font-weight-bold mt-3" %>
+                            <%= text_field_tag 'image_url', @ad.image_url, class: "form-control" %>
+
+                            <%= submit_tag "Sauvegarder", class: "btn form-control devise-btn mt-3 mb-3" %>
+                            <% end %>
+                            <hr>
+                            <div class="text-center">
+                                <%= form_tag(admin_path, method: "delete", action: "destroy") do %>
+                                <%= submit_tag 'Supprimer l\'annonce', class: "btn btn-danger mt-2", :data => {:confirm => "Êtes-vous sûr ?"} %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

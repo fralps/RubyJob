@@ -53,7 +53,8 @@ end
 user = User.create!(
 		company: Faker::Company.name,
 		email: "admin@yopmail.com",
-		password: "dumdum")
+		password: "admin1234",
+		is_admin: true)
 
 puts "-----------------------------".green
 puts "------- Admin created! ------".green
@@ -61,5 +62,5 @@ puts "-----------------------------".green
 
 puts "Access to the admin account :".green
 puts "Login: admin@yopmail.com".green
-puts "Password: dumdum".green
+puts "Password: admin1234".green
 puts "-----------------------------".green

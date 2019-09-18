@@ -664,53 +664,57 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
-# Schedule Section
+# Admin Section
 --------------------------------------------------------------*/
 
-#filter {
+#dashboard {
   padding: 150px 0;
   background: #485B6F;
 }
 
-#filter h1 {
+#dashboard h3 {
   color: #f82249;
-  text-align: center;
 }
 
-#filter h6 {
+#dashboard h4 {
   color: white;
-  text-align: center;
 }
 
-#filter .nav-tabs {
-  text-align: center;
-  margin: auto;
-  display: block;
-  border-bottom: 0;
+#dashboard h5 {
+  color: white;
+}
+
+#dashboard hr {
+  background-color: white;
+}
+
+.text {
+  color: white;
+}
+
+.text:hover {
+  color: #f82249;
+  transition: 0.5s;
+}
+
+#admin-card {
+  background: #485B6F;
+}
+
+#admin-card .card {
+  border: 1px solid #e0e5fa;
+  background: #fff;
   margin-bottom: 30px;
 }
 
-#filter .nav-tabs li {
-  display: inline-block;
-  margin-bottom: 0;
+/*---------- Ad hover effect on ads index cards ------------*/
+#admin-card .card:hover {
+  box-shadow: 0.4rem 0.4rem rgba(248, 34, 73, 0.6);
+  transform: translate3d(0, -10px, 0);
 }
 
-#filter .nav-tabs a {
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  background-color: #0e1b4d;
-  color: #fff;
-  padding: 10px 100px;
-}
-
-#filter .nav-tabs a.active {
-  background-color: #f82249;
-  color: #fff;
-}
-
-#filter .tab-pane {
-  transition: ease-in-out .2s;
+#admin-card .card {
+  transition: 0.2s;
 }
 
 /*--------------------------------------------------------------
@@ -860,6 +864,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #edit h1 {
   color: #f82249;
   text-align: center;
+}
+
+#edit h4 {
+  color: white;
 }
 
 #edit hr {

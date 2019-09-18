@@ -13,12 +13,19 @@
         <li><%= link_to "Voir les annonces", ads_path %></li>
 
         <!-- Connexion -->
+        <!-- We check if there is a user sign in -->
         <% if user_signed_in? %>
         <div class="btn-group">
           <button type="button" class="co-btn text-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Mon espace
           </button>
           <div class="dropdown-menu">
+
+            <!-- Check if the current_user is an administrator -->
+            <% if current_user.is_admin == true %>
+            <%= link_to(admins_path) do %>
+            <p class="list"><i class="fas fa-chart-line mr-1"></i></i>Dashboard admin</p>
+            <% end %>
             <%= link_to(new_ad_path) do %>
             <p class="list"><i class="fas fa-plus-square mr-1"></i>Nouvelle annonce</p>
             <% end %>
@@ -30,6 +37,22 @@
             <% end %>
             <%= link_to(destroy_user_session_path, method: :delete) do %>
             <p class="list"><i class="fas fa-user-alt-slash mr-1"></i>Déconnexion</p>
+            <% end %>
+
+            <!-- Else we do not display the dashboard admin link -->
+            <% else %>
+            <%= link_to(new_ad_path) do %>
+            <p class="list"><i class="fas fa-plus-square mr-1"></i>Nouvelle annonce</p>
+            <% end %>
+            <%= link_to(user_path(current_user)) do %>
+            <p class="list"><i class="fas fa-folder-open mr-1"></i>Mes annonces </p>
+            <% end %>
+            <%= link_to(edit_user_path(current_user)) do %>
+            <p class="list"><i class="fas fa-cog mr-1"></i>Éditer mon profil </p>
+            <% end %>
+            <%= link_to(destroy_user_session_path, method: :delete) do %>
+            <p class="list"><i class="fas fa-user-alt-slash mr-1"></i>Déconnexion</p>
+            <% end %>
             <% end %>
           </div>
         </div>

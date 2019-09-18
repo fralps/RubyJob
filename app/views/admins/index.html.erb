@@ -1,0 +1,28 @@
+<section id="dashboard" class="text-light">
+    <div class="container wow fadeIn">
+        <div class="row">   
+            <%= render 'dashboard' %>
+            <!-- Main content -->
+            <div class="col-sm-12 col-md-9">
+                    <!-- Website activity -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <h4><i class="fas fa-info-circle"></i> Activité du site</h4>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row px-2">
+                        <div class="col">
+                            <h3 class="mb-1"><%= @total_ad_count %></h3>
+                            <p>Annonces sont en ligne</p>
+                        </div>
+                        <div class="col">
+                            <h3 class="mb-1"><%= @total_users_count %></h3>
+                            <p>Utilisateurs sont inscrits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

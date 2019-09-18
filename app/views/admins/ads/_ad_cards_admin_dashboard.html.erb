@@ -1,0 +1,35 @@
+<div id="admin-card" class="row">
+	<% @ads.each do |a| %>
+	<%= link_to(edit_admins_ad_path(a.id)) do %>
+	<div class="col col-6">
+		<div class="card mb-5">
+			<img class="card-img-top test" src="<%= a.image_url %>" alt="Card image cap">
+			<div class="card-body">
+				<h2 class="card-title"><%= a.title.truncate(21) %></h2>
+				<hr>
+				<div class="row">
+					<div class="col col-6">
+						<span class="card-text"><i>Localisation : </i><%= a.location.truncate(5) %></span><br>
+						<span class="card-text"><i>Société : </i><%= a.user.company.truncate(10) %></span><br>
+					</div>
+					<div class="col col-6">
+						<span class="card-text"><i>Contrat : </i><%= a.contract %></span><br>
+						<span class="card-text"><i>Expérience : </i><%= a.experience.truncate(10) %></span>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div class="card-footer">
+				<% if  a.created_at.localtime.strftime("%d/%m/%y") == Time.now.strftime("%d/%m/%y") %>
+				<small class="text-muted"><b>Mise en ligne : </b>Aujourd'hui à <%= a.created_at.localtime.strftime("%H:%M")%></small>
+				<% elsif a.created_at.strftime("%d/%m/%y") == Time.now.yesterday.strftime("%d/%m/%y") %>
+				<small class="text-muted"><b>Mise en ligne : </b>Hier à <%= a.created_at.localtime.strftime("%H:%M")%></small>
+				<% else %>					
+				<small class="text-muted"><b>Mise en ligne le : </b><%= a.created_at.localtime.strftime("%d/%m/%y") %> à <%= a.created_at.localtime.strftime("%H:%M")%></small>
+				<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>

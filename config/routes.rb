@@ -9,6 +9,13 @@ Rails.application.routes.draw do
 
   # ------- Route declarations : ---------
   resources :ads
-
+  resources :admins, only: [:index, :edit, :update, :destroy]
   resources :users, only: [:show, :edit, :update, :destroy]
+
+  # Admin dashboard
+  namespace :admins do
+    root to: "admins#index"
+    resources :users
+    resources :ads, only: [:index, :edit, :update, :destroy]
+  end
 end
