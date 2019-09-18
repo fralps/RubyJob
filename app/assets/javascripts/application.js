@@ -27,3 +27,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// JQuery
+$(document).ready(function() {
+	// Make an element disappear after a short time
+	$('.delay_fadeout').delay(2750).fadeOut(400); 
+});
