@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <title>Ruby Job</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <%= favicon_link_tag asset_path('logo.png') %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
@@ -14,11 +20,6 @@
     <!-- Box Icon -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.3/css/boxicons.min.css' rel='stylesheet'>
 
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
@@ -33,6 +34,9 @@
 
     <!-- Footer partial -->
     <%= render 'layouts/footer' %>
+
+    <!-- Application.js -->
+    <%= javascript_include_tag 'application' %>
 
     <!-- Box Icon JS -->
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>

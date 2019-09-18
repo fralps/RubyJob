@@ -22,10 +22,9 @@
 //= require venobox/venobox.min
 //= require contactform/contactform
 //= require js/main
-
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+
 //= require_tree .
 
 // JQuery
