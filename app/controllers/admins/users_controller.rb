@@ -1,41 +1,27 @@
-class UsersController < ApplicationController
-	before_action :dont_show
+class Admins::UsersController < ApplicationController
 	before_action :authenticate_user!
+	before_action :check_if_admin
 	
+	def index
+		@users = User.all
+	end
+
 	def show
-		@user = User.friendly.find(params[:id])
-	end
-
-	def dont_show
-		@user = User.friendly.find(params[:id])
-		if (@user != current_user) 
-			redirect_to root_path flash[:alert] = "Information confidentielle" 
-		end
-	end
-
-	def edit
-		@user = User.friendly.find(params[:id])
-	end
-
-	def update
-		@user = User.friendly.find(params[:id])
-		if current_user == @user
-			if @user.update(company: params[:company])
-				redirect_to user_path 
-				flash[:success] = "Votre profil a été édité avec succès 👍"
-			else 
-				flash[:alert] = "Un problème est survenu, veuillez reessayer"
-				render :edit
-			end
-		else
-			redirect_to root_path, notice: "Vous n'avez pas accès à ce profil !"
-		end	
+		@user = User.find(params[:id])
 	end
 
 	def destroy
 		@user = User.friendly.find(params[:id])
 		@user.destroy
-		redirect_to "/"
-		flash[:success] = "Vous nous quittez déjà 😢 ! À bientôt.."
+		redirect_to admins_users_path
+		flash[:success] = "Le profil a bien été supprimé."
 	end
+
+	def check_if_admin
+		if current_user.is_admin == false
+			flash[:error] = "Vous n'êtes pas un administrateur !"
+			redirect_to root_path
+		end
+	end
+
 end

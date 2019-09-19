@@ -701,6 +701,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #485B6F;
 }
 
+#admin-card span {
+  color: black;
+}
+
+#admin-card span i {
+  color: #f82249;
+}
+
 #admin-card .card {
   border: 1px solid #e0e5fa;
   background: #fff;
@@ -714,6 +722,27 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #admin-card .card {
+  transition: 0.2s;
+}
+
+#admin-card-users {
+  background: #485B6F;
+}
+
+#admin-card-users .card {
+  border: 1px solid #e0e5fa;
+  background: #fff;
+  margin-bottom: 30px;
+  width: 800px;
+}
+
+/*---------- Ad hover effect on ads index cards ------------*/
+#admin-card-users .card:hover {
+  box-shadow: 0.4rem 0.4rem rgba(248, 34, 73, 0.6);
+  transform: translate3d(0, -10px, 0);
+}
+
+#admin-card-users .card {
   transition: 0.2s;
 }
 

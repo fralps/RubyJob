@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # Admin dashboard
   namespace :admins do
     root to: "admins#index"
-    resources :users
+    resources :users, only: [:index, :show, :destroy]
     resources :ads, only: [:index, :edit, :update, :destroy]
   end
 end

@@ -21,7 +21,7 @@ DatabaseCleaner.clean_with(:truncation)
 User.destroy_all
 Ad.destroy_all
 
-20.times do 
+10.times do 
 
 	user = User.create!(
 		company: Faker::Company.name,
@@ -32,7 +32,7 @@ Ad.destroy_all
 		puts "User created".green
 end
 
-10.times do
+20.times do
 	ad = Ad.create!(
 		title: ["Développeur Fullstack Ruby On Rails", "Développeur Web Ruby On Rails", "Développeur Backend Ruby"].sample,
 		job_description: Faker::Lorem.paragraph_by_chars(number: 1000, supplemental: false),
@@ -42,7 +42,7 @@ end
 		contract: ["CDI", "CDD", "Freelance", "Stage", "Alternance"].sample,
 		email: Faker::Internet.email,
 		experience: ["Très junior", "Junior", "Sénior"].sample,
-		user_id: rand(1..20),
+		user_id: rand(1..10),
 		image_url: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80", "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", "https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80", "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"].sample)
 
 	# Puts to show every time an item is added
