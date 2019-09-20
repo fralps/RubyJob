@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # We define root to the homepage
   root to:'static_pages#index'
 
+  # Static pages
+  get 'static_pages/contact'
+
   # Routes for Devise
   devise_for :users
 
