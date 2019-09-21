@@ -1,5 +1,7 @@
 # Ruby Job
-*La plateforme dédiée au recrutement de développeurs Ruby On Rails*
+*La plateforme dédiée au recrutement de développeurs Ruby On Rails*  
+
+[![ruby-job.jpg](https://i.postimg.cc/dVZbWfLG/ruby-job.jpg)](https://postimg.cc/68wbqYVQ)
 
 #### Projet Ruby Job
 Vous êtes développeur ?  
