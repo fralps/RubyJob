@@ -1,24 +1,32 @@
-# README
+# Ruby Job
+*La plateforme dédiée au recrutement de développeurs Ruby On Rails*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Projet Ruby Job
+Vous êtes développeur ?  
+Spécialistes de Ruby on Rails, cette plateforme est faite pour vous. Accédez à de nombreuses offres d'emploi et postulez directement depuis ce site.  
+Sur Ruby Job, vous avez l'assurance d'être recontacté rapidement par les recruteurs, sous 3 jours maximum.
 
-Things you may want to cover:
+Vous êtes recruteur ?  
+Ruby Job est l'endroit idéal pour trouver le développeur de vos rêves !  
+En postant votre annonce sur Ruby Job, vous vous engagez à recontacter les candidats sous 3 jours, pour un recrutement rapide et facilité.
 
-* Ruby version
+#### Déroulé du projet
 
-* System dependencies
+Projet réalisé en une semaine dans le cadre d'un projet personnel afin de me perfectionner en ROR.
 
-* Configuration
+Branchement d'un thème bootstrap, finalisation du CRUD, bases de données, git, github...
 
-* Database creation
+#### Mon projet
 
-* Database initialization
+Pour tester la plateforme veuillez suivre les instructions ci-dessous :  
 
-* How to run the test suite
+1. Cloner le repo sur votre pc
+2. Ouvrir un terminal dans le dossier : `bundle install`
+3. Créer la BDD : `rails db:create`
+4. Passer les migrations : `rails db:migrate`
+5. Lancer le seed.rb : `rails db:seed`
+6. Lancer le serveur rails : `rails server`
+7. Vous rendre sur : http://localhost:3000/
+8. Enjoy 👍  
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+N'hésiter pas à me faire parvenir vos retours 📨
